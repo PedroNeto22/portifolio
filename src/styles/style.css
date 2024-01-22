@@ -1,0 +1,129 @@
+:root {
+  --border-radius: 10px;
+  --border-color: #21262d;
+  --color-white: #ffffff;
+  --title-font-size: 25px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  user-select: none;
+}
+
+body {
+  background-color: #0d1117;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.perfil {
+  margin: 100px;
+  align-self: center;
+  text-align: center;
+}
+
+#name {
+  font-weight: 600;
+  margin-top: 40px;
+  color: var(--color-white);
+  font-size: var(--title-font-size);
+}
+
+.content {
+  align-self: center;
+  text-align: center;
+}
+
+.content p:first-child {
+  font-weight: 600;
+  font-size: var(--title-font-size);
+  margin-bottom: 25px;
+  color: var(--color-white);
+}
+
+.projects {
+  user-select: none;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  border: 2px solid var(--border-color);
+  gap: 15px;
+  border-radius: var(--border-radius);
+  padding: 25px 20px 25px 30px;
+  width: fit-content;
+  height: fit-content;
+  max-height: 550px;
+  overflow: hidden scroll;
+  background-color: #010409;
+}
+
+.projects a {
+  text-decoration: none;
+}
+
+.git-hub-card {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--border-color);
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 200px;
+  background-color: #0d111729;
+  background-color: #0d1117;
+  gap: 20px;
+}
+
+.git-hub-card:hover {
+  background-color: #0d1117d8;
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+.git-hub-card ion-icon {
+  font-size: 60px;
+  color: var(--color-white);
+}
+
+.project-name {
+  color: var(--color-white);
+  font-size: 16px;
+}
+
+.social-midias {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  margin-top: 50px;
+  font-size: 40px;
+  gap: 15px;
+}
+
+.social-midias a {
+  color: var(--color-white);
+}
+
+.social-midias a:hover {
+  color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 700px) {
+  .projects {
+    padding: 20px;
+    grid-template-columns: 100%;
+    max-height: 400px;
+  }
+}
